@@ -1,0 +1,68 @@
+A1:
+	the output will be :
+
+	"hey from message1" 
+
+	BECOUSE: there's no another command & we use one @Bean annotation.
+
+
+A2:
+	the output will be :
+
+	"hey from message1"
+	"hey from message2"
+
+	BECOUSE: we use @Qualifier before getMessage1() method and we assign this
+ 	@Qualifier to the perameter in getMessage2() method.
+
+A3:
+	the output will be :
+
+	"hey from message3"
+	"hey from message1"
+	"hey from message2"
+	
+	OR :
+
+	"hey from message3"
+	"hey from message2"
+	"hey from message1"
+
+	BECOUSE: we use @Qualifier("3") in getMessage2() perameter thats mean we sure 	
+	the first @Bean will proccess is getMessage3() method, but we aren't sure about 	
+	getMessage1() & getMessage2() which one will be the first becouse we didn't use 	
+	any @Qualifier belongs to them in other @Beans. 
+
+A4:
+	the output will be :
+
+	"hey from message3"
+	"hey from message1"
+	"hey from message2"
+	
+	OR :
+
+	"hey from message3"
+	"hey from message2"
+	"hey from message1"
+
+	BECOUSE: the same reason in Q3, and it will not run MainControler() method
+ 	becouse we didn't use @Bean annotation.
+
+A5:
+
+	the output will be :
+
+	"hey from message3"
+	"hey from message1"
+	"hey from message2"
+	
+	OR :
+
+	"hey from message3"
+	"hey from message2"
+	"hey from message1"
+
+	BECOUSE: the same reason in Q4, there's no @Bean in MainController() method 
+	
+	
